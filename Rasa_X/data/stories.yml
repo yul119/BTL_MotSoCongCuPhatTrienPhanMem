@@ -1,0 +1,105 @@
+version: "2.0"
+stories:
+- story: chao_TenKhac_tenCB_chucnang_chao
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: bot_name
+  - action: utter_name
+  - intent: bot_func
+  - action: utter_func_list
+  - intent: goodbye
+  - action: utter_goodbye
+- story: chao_HoiTen
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: chao_ten_chao
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: bot_name
+  - action: utter_name
+  - intent: goodbye
+  - action: utter_goodbye
+- story: chao_chucnang_chao
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: bot_func
+  - action: utter_func_list
+  - intent: goodbye
+  - action: utter_goodbye
+- story: ten_chucnang
+  steps:
+  - intent: bot_name
+  - action: utter_name
+  - intent: bot_func
+  - action: utter_func_list
+#Diem danh
+- story: HD_Diem_Danh
+  steps:
+    - intent: Guide_point_list
+    - action: utter_Guide_point_list
+
+- story: Diem_Danh
+  steps:
+    - intent: point_list
+    - action: action_Point_List
+
+- story: HD_Thoi_Gian_Diem_danh
+  steps:
+    - intent: Time_point_list
+    - action: utter_Time_point_list
+    - intent: Set_Time_point_list
+    - action: action_Get_Time_point_List
+    - intent: point_list
+    - action: action_Point_List
+
+- story: Set_Time_Diem_Danh
+  steps:
+    - intent: Set_Time_point_list
+    - action: action_Get_Time_point_List
+
+- story: cancel_aff_time_DiemDanh
+  steps:
+    - intent: cancel_time
+    - action: utter_cancel_time
+    - intent: affirm
+    - action: action_cancel_time
+
+- story: cancel_deny_time_DiemDanh
+  steps:
+    - intent: cancel_time
+    - action: utter_cancel_time
+    - intent: deny
+    - action: utter_deny_cancel_time
+
+- story: Chaohoi_TinhDiemMon
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: Calculate_Score
+    - action: action_Calculate_Score
+
+
+- story: TinhDiemMon
+  steps:
+    - intent: Calculate_Score
+    - action: action_Calculate_Score
+
+- story: Chaohoi_ThongTinMonHoc
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: C_Score
+    - action: utter_C_Score
+    - intent: Course_Information
+    - action: action_Course_Information
+- story: Suport_MonHoc
+  steps:
+    - intent: Subject_Suport
+    - action: action_Subject_Suport
